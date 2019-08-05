@@ -45,28 +45,33 @@
            <!-- Adding new auth links -->
 
            {% if request.user.is_staff %}
-           <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <li class="has-children">
+             <a href="#">
                Manage Tasks
              </a>
-             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-               <a class="dropdown-item" href="{% url 'backend'%}">Admin Panel</a>
-             </div>
+            <ul class="dropdown arrow-top">
+                <li>
+                    <a class="dropdown-item" href="{% url 'backend'%}">Admin Panel</a>
+                </li>
+              
+            </ul>
+               
+            
            </li>
      
 
          {% endif %}
          {% if user.is_authenticated %}
          {% comment %} ################## {% endcomment %}
-
-         <li class="has-children">
-<a href="#">Account</a>
-<ul class="dropdown arrow-top">
-<li><a href="{% url 'profile'%}">Profile</a></li>
-<li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-<li><a href="{% url 'account_logout' %}">Sign Out</a></li>
-</ul>
-</li>
+        
+        <li class="has-children">
+        <a href="#">Account</a>
+        <ul class="dropdown arrow-top">
+        <li><a href="{% url 'profile'%}">Profile</a></li>
+        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
+        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
+        </ul>
+        </li>
 
          {% comment %} ##################### {% endcomment %}
          
