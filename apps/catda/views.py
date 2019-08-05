@@ -2,7 +2,8 @@ from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from django.shortcuts import render, redirect, get_list_or_404, reverse, get_object_or_404
 from .models import CatdaSoccerPlayer, CatdaExecutiveTeam,CatdaTeamPosition, CatdaTechnicalTeam
 from django.db.models import Count, Q
-from apps.posts.models import Author
+from apps.posts.models import Author, Post
+from apps.posts.views import get_category_count
 from .forms import CatdaSoccerPlayersForm,CatdaExecutiveForm, CatdaTechnicalMemberForm
 
 
@@ -55,8 +56,25 @@ def catda_team(request):
     return render(request,'catda_template/team.html', context)
 
 def catda_news(request):
+    category_count = get_category_count()
+    most_recent = Post.objects.order_by('-timestamp')[:3]
+    post_list = Post.objects.all().order_by('-timestamp')
+    paginator = Paginator(post_list, 4)
+    page_request_var = 'page'
+    page = request.GET.get(page_request_var)
+
+    try:
+        paginated_queryset = paginator.page(page)
+    except PageNotAnInteger:
+        paginated_queryset = paginator.page(1)
+    except EmptyPage:
+        paginated_queryset = paginator.page(paginator.num_pages)
+
     context = {
-        'news_catda':'catda news'
+        'queryset': paginated_queryset,
+        'most_recent': most_recent,
+        'page_request_var': page_request_var,
+        'category_count': category_count
     }
     
     return render(request,'catda_template/news.html', context)
