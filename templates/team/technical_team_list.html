@@ -1,0 +1,45 @@
+{% extends "base_prime.html" %}
+
+
+{% load static %}
+
+ {% block content %}
+<div class="container">
+ <h1>Technical team</h2>
+   
+{% for technical_member in tech_team_listing %}
+<div>
+
+<h2 class="text-left">{{ technical_member.full_name }}</h2>
+
+<div class="row d-flex justify-content-between">
+
+<div class="col-md-4">
+{% comment %} <h3>{{ technical_member.featured }}</h3><br/> {% endcomment %}
+<div class="post-body">
+<h4>Short Description</h4>
+{{ technical_member.short_description }}</div><br/>
+<h4>Title: {{ technical_member.title }}</h4><br/>
+
+{% comment %} <div class="post-body">
+{{ technical_member.bio | safe }}
+</div> {% endcomment %}
+
+
+
+<h4> edited by {{ technical_member.author }}</h4><br/>
+</div>
+<div  class="col-md-6">
+<div class="post-thumbnail"><a href="{{ technical_member.get_absolute_url }}"><img src="{{ technical_member.bio_picture.url }}" alt="..." class="img-fluid"></a></div><br/>
+<div class="post-thumbnail"><a href="{{ technical_member.get_absolute_url }}"><img src="{{ technical_member.featured_picture.url }}" alt="..." class="img-fluid"></a></div><br/>
+</div>
+
+</div>
+</div>
+
+
+{% endfor %}
+</div>
+
+  
+ {% endblock content %}

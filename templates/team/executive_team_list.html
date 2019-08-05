@@ -1,0 +1,50 @@
+{% extends "base_prime.html" %}
+
+
+{% load static %}
+
+ {% block content %}
+
+<div class="container">
+ <h1>Executive Teams</h1>
+   
+{% for executive in executives_listing %}
+<div>
+
+
+<div class="row container d-flex justify-content-between">
+<div class="col-md-4">
+<h2 class="text-center">{{ executive.full_name }}</h2>
+
+  <h3>{{ executive.title }}</h3><br/>
+    {% comment %} <h3>{{ executive.featured }}</h3><br/> {% endcomment %}
+    <p>Short Description</p>
+
+    <p class="lead">
+    {{ executive.short_description }}
+    </p>
+  
+
+    <div class="post-body">
+    {{ executive.bio | safe }}
+    </div>
+
+
+
+    <h3> edited by {{ executive.author }}</h3><br/>
+</div>
+
+<div  class="col-md-6">
+        <div class="post-thumbnail"><a href="{{ executive.get_absolute_url }}"><img src="{{ executive.bio_picture.url }}" alt="..." class="img-fluid"></a></div><br/>
+        <div class="post-thumbnail"><a href="{{ executive.get_absolute_url }}"><img src="{{ executive.featured_picture.url }}" alt="..." class="img-fluid"></a></div><br/>
+</div>
+
+</div>
+</div>
+
+
+{% endfor %}
+
+</div>
+  
+ {% endblock content %}

@@ -1,0 +1,16 @@
+.logo img{
+    width: 150px;
+    height:150px;
+}
+
+@media(max-width:768px){
+    .logo img{
+        width: 75px;
+        height:75px;
+    }
+}
+.site-navigation ul li:hover{
+    background-color:rgb(0, 0, 0);
+    color: snow;
+    font-weight: 300;
+}

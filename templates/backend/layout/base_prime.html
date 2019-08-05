@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include "backend/layout/head.html" %}
+    <body  class="hold-transition skin-blue sidebar-mini">
+        <div class="wrapper row">
+            {% include "backend/layout/header.html" %}
+            {% include "backend/inc/sidebar.html" %}
+
+            {% block admin_content %}
+            
+            {% endblock admin_content %}
+            {% include 'backend/layout/footer.html' %}
+
+        </div>
+        
+        {% include 'backend/layout/scripts.html' %}
+    </body>
+</html>

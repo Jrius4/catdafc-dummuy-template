@@ -1,0 +1,71 @@
+{% extends "base_prime.html" %}
+
+
+{% load static %}
+
+ {% block content %}
+
+ <style>
+
+ .post-body img{
+   width:100%;
+ }
+ .post-body iframe{
+   width:100%;
+ }
+
+ </style>
+
+    <div class="container">
+      <div class="row">
+        <!-- Latest Posts -->
+        <main class="post blog-post col-lg-8"> 
+          <div class="container">
+            <div class="post-single">
+              <div class="post-thumbnail"><img src="{{ executive.bio_picture.url }}" alt="..." class="img-fluid"></div>
+              <div class="post-details">
+                <div class="post-meta d-flex justify-content-between">
+                  <div class="category">
+                   {{executive.title}}
+                  </div>
+                  <div>
+                  <a href="{% url 'update-executive' id=executive.id %}">Update</a>
+                  <a href="{% url 'delete-executive' id=executive.id %}">Delete</a>
+                  </div>
+                  
+                </div>
+                <h1>{{executive.full_name}}<a href="#"><i class="fa fa-bookmark-o"></i></a></h1>
+                <div class="post-footer d-flex align-items-center flex-column flex-sm-row"><a href="#" class="author d-flex align-items-center flex-wrap">
+                    <div class="avatar"><img src="{{ executive.author.profile_picture.url }}" alt="..." class="img-fluid"></div>
+                    <div class="title"><span>{{ executive.author.user.username }}</span></div></a>
+                  <div class="d-flex align-items-center flex-wrap">       
+                    <div class="date"><i class="icon-clock"></i>{{ executive.timestamp|timesince }} ago</div>
+
+                    <div class="comments meta-last"><i class="icon-comment"></i>{{ post.comment_count }}</div>
+                  </div>
+                </div>
+                <div class="post-body">
+                 {{executive.bio | safe }}
+                </div>
+                <div class="post-tags">
+                {% for lead in executive.team_positions.all %}
+
+                    <a href="#" class="tag">{{ lead }}</a>
+
+                    {% endfor %}
+                
+                
+                </div>
+              
+            </div>
+          </div>
+        </main>
+      
+      {% comment %} {% include "sidebar.html" with most_recent=most_recent category_count=category_count %} {% endcomment %}
+      
+
+      </div>
+    </div>
+
+   
+ {% endblock content %}

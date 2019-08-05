@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {% include "catda_template/head.html" %}
+    <body  class="hold-transition skin-blue sidebar-mini">
+        <div class="site-wrap">
+
+    {% include "catda_template/header.html" %}            
+
+            {% block content %}
+
+
+
+
+            
+            {% endblock content %}
+            {% include 'catda_template/footer.html' %}
+
+        </div>
+        
+        {% include 'catda_template/scripts.html' %}
+</body>
+</html>
