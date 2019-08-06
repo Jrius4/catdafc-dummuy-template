@@ -14,7 +14,8 @@
 
             
             {% endblock content %}
-            {% include 'catda_template/footer.html' %}
+            {% load render_partial %}
+                {% render_partial 'apps.catda.views.prime_partial_footer' %}
 
         </div>
         

@@ -88,4 +88,16 @@
     
     </div>
 
+    <section style="background-color:darkgoldenrod;min-height:150px;z-index:2">
+        {% load render_partial %}
+            {% with some_var=2 %}
+            {% comment %} {% render_partial 'partial_view' arg1=40 arg2=some_var %} {% endcomment %}
+            {% render_partial 'apps.catda.views.partial_view' arg1=90 arg2=some_var %} 
+
+            {% endwith %}
+
+    </section>
+        {% comment %} <!-- {% render_partial 'partial_test.views.PartialView' arg1=40 arg2=some_var %} --> {% endcomment %}
+  
+
 {% endblock content %}

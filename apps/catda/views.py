@@ -315,3 +315,40 @@ def delete_player(request, id):
     player.delete()
     return redirect(reverse("player-list"))
 
+def partial_view(request, *args, **kwargs):
+    result = kwargs['arg1'] + kwargs['arg2']
+    kwargs['result'] = result
+    return render(request, 'catda_template/partial_view.html', kwargs)
+
+
+
+def partial_footer(request):
+    info = "Am a test paragraph"
+
+    context={
+        'info':info
+    }
+
+    return render(request,'catda_template/partial_footer.html',context)
+
+def prime_partial_footer(request):
+    info = "Am a test paragraph"
+    most_recent = Post.objects.order_by('-timestamp')[:3]
+
+
+    context={
+        'info':info,
+        'most_recent':most_recent
+    }
+
+    return render(request,'catda_template/footer.html',context)
+
+
+# class PartialView(TemplateView):
+#     template_name = 'partial_view.html'
+
+#     def get_context_data(self, **kwargs):
+#         result = kwargs['arg1'] + kwargs['arg2']
+#         kwargs['result'] = result
+#         return super(PartialView, self).get_context_data(**kwargs)
+

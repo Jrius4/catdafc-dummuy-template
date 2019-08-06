@@ -29,7 +29,8 @@ from apps.backend.views import (backend, player_index, create_splayer,
 
 from apps.catda.views import (catda_index,catda_about,
                               catda_match,catda_team,
-                              catda_news,catda_contact)
+                              catda_news,catda_contact,
+                              partial_view)
 
 
 
@@ -44,6 +45,17 @@ urlpatterns = [
     path('team/', catda_team),
     path('news/', catda_news),
     path('contact/', catda_contact),
+
+    #partials
+
+    # url(r'^partial-view/(?P<arg1>\w+)/(?P<arg2>\w+)/$',
+    # partial_view,
+    # name='partial_view'),
+
+    # url(r'^partial-view/(?P<arg1>\w+)/(?P<arg2>\w+)/$',
+    # PartialView.as_view(),
+    # name='partial_view'),
+    #end partials
 
     #more routes
     path('index/', index),
