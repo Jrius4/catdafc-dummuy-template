@@ -112,16 +112,16 @@ def executive_member_detail(request, id):
     return render(request, 'team/executive_member__detail.html', {})
 
 
-def player_list(request):
-    soccer_player_list = CatdaSoccerPlayer.objects.all()
+def catda_player_list(request):
+    players_list = CatdaSoccerPlayer.objects.all()
    
     context = {
-        'soccer_player_list':soccer_player_list,
+        'players_list':players_list,
     }
-    return render(request, 'team/players_list.html', context)
+    return render(request, 'catda_template/team/players/players_list.html', context)
 
-def player(request, id):
-    player = get_object_or_404(SoccerPlayer, id=id)
+def catda_player(request, id):
+    player = get_object_or_404(CatdaSoccerPlayer, id=id)
     most_recent = CatdaSoccerPlayer.objects.order_by('-timestamp')[:3]
    
     context = {
@@ -129,7 +129,7 @@ def player(request, id):
         'player': player,
         'most_recent': most_recent,
     }
-    return render(request, 'team/player_detail.html', context)
+    return render(request, 'catda_template/team/players/player_detail.html', context)
 
 def executive(request, id):
     executive = get_object_or_404(CatdaExecutiveTeam, id=id)
@@ -342,6 +342,48 @@ def prime_partial_footer(request):
     }
 
     return render(request,'catda_template/footer.html',context)
+
+
+def prime_partial_sidebar(request):
+    category_count = get_category_count()
+    most_recent = Post.objects.order_by('-timestamp')[:3]
+
+
+
+    context={
+        'most_recent': most_recent,
+        'category_count': category_count,
+
+    }
+
+    return render(request,'catda_template/sidebar.html',context)
+
+
+
+
+def prime_partial_news_highlight(request):
+    most_recent = Post.objects.order_by('-timestamp')[:3]
+
+    context={
+        'most_recent': most_recent,
+    }
+
+    return render(request,'catda_template/news-highlight.html',context)
+
+
+def partial_players(request):
+    most_recent_players = CatdaSoccerPlayer.objects.order_by('-timestamp')[:4]
+   
+    context = {
+
+        'most_recent_players': most_recent_players,
+    }
+    return render(request, 'catda_template/team/players/featured-players.html', context)
+
+
+
+
+
 
 
 # class PartialView(TemplateView):

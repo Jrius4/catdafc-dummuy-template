@@ -16,19 +16,18 @@
     <div class="block-25">
       <ul class="list-unstyled">
         
-        {% for obj in most_recent %}
-        <li class="mb-3">
-          <a href="{{obj.get_absolute_url}}" class="d-flex">
-            <figure class="image mr-4">
-              <img src='{{ obj.thumbnail.url }}' alt="" class="img-fluid">
-            </figure>
-            <div class="text">
-              <h3 class="heading font-weight-light">{{obj.title}}</h3>
-            </div>
-          </a>
-        </li>
-        {% endfor %}
-        
+          {% for obj in most_recent %}
+            <li class="mb-3">
+              <a href="{{obj.get_absolute_url}}" class="d-flex">
+                <figure class="image mr-4">
+                  <img src='{{ obj.thumbnail.url }}' alt="" class="img-fluid">
+                </figure>
+                <div class="text">
+                  <h3 class="heading font-weight-light">{{obj.title}}</h3>
+                </div>
+              </a>
+            </li>
+          {% endfor %}        
 
       </ul>
     </div>

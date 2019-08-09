@@ -27,7 +27,7 @@ def search(request):
     context = {
         'queryset': queryset
     }
-    return render(request, 'search_results.html', context)
+    return render(request, 'catda_template/search_results.html', context)
 
 
 def get_category_count():
@@ -82,7 +82,7 @@ def blog(request):
         'page_request_var': page_request_var,
         'category_count': category_count
     }
-    return render(request, 'blog.html', context)
+    return render(request, 'catda_template/blog.html', context)
 
 
 def post(request, id):
@@ -107,7 +107,7 @@ def post(request, id):
         'category_count': category_count,
         'form': form,
     }
-    return render(request, 'post.html', context)
+    return render(request, 'catda_template/post.html', context)
 
 
 def add_post_tiny(request):

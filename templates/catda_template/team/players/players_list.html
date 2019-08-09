@@ -1,0 +1,53 @@
+{% extends "catda_template/prime.html" %}
+
+{% load static %}
+
+ {% block content %}
+<div class="container">
+ <h1>Players</h2>
+
+{% for player in players_list %}
+<div>
+
+<h3 class="text-left">Player Name: {{ player.full_name }}</h3>
+
+<div class="row d-flex justify-content-between">
+
+<div class="col-md-4">
+{% comment %} <h3>{{ player.featured }}</h3><br/> {% endcomment %}
+
+    <div class="post-body">
+    <h5>Short Description</h5>
+    {{ player.short_description }}
+
+   
+
+   <p> Lead: {% for lead in player.team_positions.all %}<span>{{ lead }}</span>{% endfor %}</p>
+
+
+
+{% comment %} 
+    <span>{{ player.ratings }}</span><br/> {% endcomment %}
+
+        <span>Strong Foot: {% for strong_foot in player.strongest_foot.all   %}<span> {{ strong_foot }}</span>{% endfor %}</span>
+        <h6>Date of Birth: {{ player.dob }}</h6><br/>
+        <h6>{{ player.former_team }}</h6><br/>
+        <h6>created at {{ player.timestamp }}</h6><br/>
+        <h6> edited by {{ player.author }}</h6><br/>
+     </div>
+</div>
+<div  class="col-md-6 row justify-content-between">
+
+<div class="post-thumbnail col-6"><a href="{{ player.get_absolute_url }}"><img src="{{ player.bio_picture.url }}" alt="..." class="img-fluid"></a></div><br/>
+
+</div>
+
+</div>
+</div>
+
+
+{% endfor %}
+
+</div>
+  
+ {% endblock content %}

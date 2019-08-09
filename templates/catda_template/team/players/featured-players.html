@@ -1,0 +1,48 @@
+{% load static %}
+
+
+    <!-- team section -->
+    <div class="site-section bg-light">
+        <!-- team member rows -->
+      <div class="container">
+     
+        <div class="row">
+          <div class="col-md-12 text-center mb-5">
+            <h3 class="text-black">Catda F.C Players</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          
+
+          {% for obj in most_recent_players %}
+
+          <div class="mb-4 mb-lg-0 col-6 col-md-4 col-lg-2 text-center">
+            <div class="player mb-5">
+              <span class="team-number">{{obj.team_number}}</span>
+              <a href="{{ obj.get_absolute_url }}">
+              <img src="{{ obj.bio_picture.url }}" alt="Image" class="img-fluid image rounded-circle">
+              </a>
+              <h4 class="text-uppercase">{{obj.full_name}}</h4>
+              {% for lead in obj.catda_team_positions.all %}
+              <span class="position">{{ lead }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          
+          {% endfor %}
+          
+
+       
+          
+        </div>
+        <div class="text-center">
+          <a href="/team" class="btn btn-info">
+            Meet The Players &raquo;
+          </a>
+        </div>
+
+        <!-- end team member rows -->
+      </div>
+    </div>
+      <!-- end team section -->

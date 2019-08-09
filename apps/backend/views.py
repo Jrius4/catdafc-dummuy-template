@@ -133,3 +133,8 @@ def catda_post_delete(request, id):
     post.delete()
     return redirect(reverse("backend-posts"))
 
+def partial_scripts(request, *args, **kwargs):
+    kwargs['input']
+    
+    return render(request, '"backend/inc/script.html', kwargs)
+
