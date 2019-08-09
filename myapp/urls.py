@@ -29,7 +29,9 @@ from apps.backend.views import (backend, player_index, create_splayer,
 
 from apps.catda.views import (catda_index,catda_about,
                               catda_match,catda_team,
-                              catda_news,catda_contact)
+                              catda_news,catda_contact,
+                              partial_view,catda_player,
+                              catda_player_list)
 
 
 
@@ -44,6 +46,17 @@ urlpatterns = [
     path('team/', catda_team),
     path('news/', catda_news),
     path('contact/', catda_contact),
+
+    #partials
+
+    # url(r'^partial-view/(?P<arg1>\w+)/(?P<arg2>\w+)/$',
+    # partial_view,
+    # name='partial_view'),
+
+    # url(r'^partial-view/(?P<arg1>\w+)/(?P<arg2>\w+)/$',
+    # PartialView.as_view(),
+    # name='partial_view'),
+    #end partials
 
     #more routes
     path('index/', index),
@@ -72,13 +85,18 @@ urlpatterns = [
     url(r'^tinymce/', include('tinymce.urls')),
 
     ## roles lists
-    path('players/', player_list, name='player-list'),
+    
+
     path('executives/', executive_team_list, name='executive-list'),
     path('technicalteams/', technical_team_list, name='technical-member-list'),
 
+  #players
+    #list players
+    path('players/', catda_player_list, name='player-list'),
+    #detail player
+    path('players/<id>/', catda_player, name='player-detail'),
 
-
-    path('players/<id>/', player, name='player-detail'),
+    
     path('accounts/profile/', profile, name='profile'),
     path('executives/<id>/', executive, name='executive-detail'),
     path('technicalteams/<id>/', technical_member, name='technical-member-detail'),

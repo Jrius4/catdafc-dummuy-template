@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'django_render_partial',
 
     #apps
     'apps.players',
@@ -95,6 +96,7 @@ TEMPLATES = [
                 
                 # `allauth` needs this from django
                 'django.template.context_processors.request',
+
             ],
         },
     },

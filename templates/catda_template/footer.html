@@ -15,28 +15,19 @@
       <h3 class="footer-heading mb-4">Recent Blog</h3>
     <div class="block-25">
       <ul class="list-unstyled">
-
-        <li class="mb-3">
-          <a href="#" class="d-flex">
-            <figure class="image mr-4">
-              <img src="{% static '/catda_assets/images/img_1.jpg' %}" alt="" class="img-fluid">
-            </figure>
-            <div class="text">
-                <h3 class="heading font-weight-light">Catda Takes over the competition</h3>
-            </div>
-          </a>
-        </li>
-
-        <li class="mb-3">
-          <a href="#" class="d-flex">
-            <figure class="image mr-4">
-              <img src="{% static '/catda_assets/images/img_1.jpg' %}" alt="" class="img-fluid">
-            </figure>
-            <div class="text">
-              <h3 class="heading font-weight-light">Catfc players staging for the matct</h3>
-            </div>
-          </a>
-        </li>
+        
+          {% for obj in most_recent %}
+            <li class="mb-3">
+              <a href="{{obj.get_absolute_url}}" class="d-flex">
+                <figure class="image mr-4">
+                  <img src='{{ obj.thumbnail.url }}' alt="" class="img-fluid">
+                </figure>
+                <div class="text">
+                  <h3 class="heading font-weight-light">{{obj.title}}</h3>
+                </div>
+              </a>
+            </li>
+          {% endfor %}        
 
       </ul>
     </div>
@@ -113,6 +104,7 @@
 
     </p>
     </div>
+
     </div>
     </div>
   </footer>
