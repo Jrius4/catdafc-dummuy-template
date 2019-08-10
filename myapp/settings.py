@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
 
     
     #config
@@ -45,7 +46,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
     'django_render_partial',
+    'contact_form',
 
     #apps
     'apps.players',
@@ -93,9 +96,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                
+
                 # `allauth` needs this from django
-                'django.template.context_processors.request',
+                #'django.template.context_processors.request',
 
             ],
         },
@@ -225,3 +228,31 @@ TINYMCE_DEFAULT_CONFIG = {
     'menubar': True,
     'statusbar': True,
 }
+
+
+SOCIALACCOUNT_PROVIDERS = {'facebook':
+            {'METHOD': 'oauth2',
+                'SCOPE': ['email','public_profile', 'user_friends'],
+                'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
+                'FIELDS': [
+                    'id',
+                    'email',
+                    'name',
+                    'first_name',
+                    'last_name',
+                    'verified',
+                    'locale',
+                    'timezone',
+                    'link',
+                    'gender',
+                    'updated_time'],
+                'EXCHANGE_TOKEN': True,
+                'LOCALE_FUNC': lambda request: 'kr_KR',
+                'VERIFIED_EMAIL': False,
+                'VERSION': 'v2.4'}
+                }
+
+                #facebook
+SOCIAL_AUTH_FACEBOOK_KEY = 1342828972559333  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET ='28112c18d59b4b4030454820364f12a2' #app key
+LOGIN_REDIRECT_URL = "/" 
