@@ -111,6 +111,9 @@ urlpatterns = [
     path('players/<id>/delete/', delete_player, name='delete-player'),
     # allauth path
     path('accounts/', include('allauth.urls')),
+    
+    #facebook auth
+    #url(r'^facebook/', include('django_facebook.urls')),
 
     # apis endpoints
     path('dev/', include('apps.players.urls')),
