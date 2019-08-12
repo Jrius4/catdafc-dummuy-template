@@ -31,7 +31,7 @@ from apps.catda.views import (catda_index,catda_about,
                               catda_match,catda_team,
                               catda_news,catda_contact,
                               partial_view,catda_player,
-                              catda_player_list)
+                              catda_player_list,privacy_policy)
 
 
 
@@ -46,6 +46,7 @@ urlpatterns = [
     path('team/', catda_team),
     path('news/', catda_news),
     path('contact/', catda_contact),
+    path('privacy-policy/', privacy_policy),
 
     #partials
 

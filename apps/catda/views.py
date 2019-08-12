@@ -381,8 +381,9 @@ def partial_players(request):
     return render(request, 'catda_template/team/players/featured-players.html', context)
 
 
-
-
+def privacy_policy(request):
+    
+    return render(request, 'catda_template/privacy-policy.html')
 
 
 
