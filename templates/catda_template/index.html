@@ -63,22 +63,22 @@
             <div class="container">
               <div class="border mb-3 rounded d-block d-lg-flex align-items-center p-3 next-match">
                 <div class="mr-auto order-md-1 w-60 text-center text-lg-left mb-3 mb-lg-0">
-                  Next match
-                  <div id="date-countdown"></div>
+                  Last match
+                  {% comment %} <div id="date-countdown"></div> {% endcomment %}
                 </div>
           
                 <div class="ml-auto pr-4 order-md-2">
                   <div class="h5 text-black text-uppercase text-center text-lg-left">
                     <div class="d-block d-md-inline-block mb-3 mb-lg-0">
-                      <img src="{% static 'catda_assets/images/img_1_sq.jpg' %}" alt="Image" class="mr-3 image">
-                      <span class="d-block d-md-inline-block ml-0 ml-md-3 ml-lg-0">Sea Hawlks </span>
+                      <img src="{% static 'catda_assets/images/fixtures/Fire FC.jpg' %}" alt="Image" class="mr-3 image">
+                      <span class="d-block d-md-inline-block ml-0 ml-md-3 ml-lg-0">Fire FC</span>
                     </div>
                     
                     <span class="text-muted mx-3 text-normal mb-3 mb-lg-0 d-block d-md-inline ">vs</span>
           
                     <div class="d-block d-md-inline-block">
-                      <img src="{% static 'catda_assets/images/img_3_sq.jpg' %}" alt="Image" class="mr-3 image">
-                      <span class="d-block d-md-inline-block ml-0 ml-md-3 ml-lg-0">Patriots</span>
+                      <img src="{% static 'catda_assets/images/catda.png' %}" alt="Image" class="mr-3 image">
+                      <span class="d-block d-md-inline-block ml-0 ml-md-3 ml-lg-0">Catda FC</span>
                     </div>
                   </div>
                 </div>
@@ -92,11 +92,11 @@
                           <div class="text-center text-lg-left">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image mx-auto mb-3 mb-lg-0 mr-lg-3">
-                                  <img src="{% static 'catda_assets/images/img_1_sq.jpg' %}" alt="Image" class="img-fluid">
+                                  <img src="{% static 'catda_assets/images/fixtures/Fire FC.jpg' %}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text">
-                                <h3 class="h5 mb-0 text-black">Sea Hawks</h3>
-                                <span class="text-uppercase small country text-black">Brazil</span>
+                                <h3 class="h5 mb-0 text-black">Fire FC</h3>
+                                {% comment %} <span class="text-uppercase small country text-black">Brazil</span> {% endcomment %}
                               </div>
                             </div>
                           </div>
@@ -104,7 +104,7 @@
           
                         <div class="col-md-12 col-lg-4 text-center mb-4 mb-lg-0">
                           <div class="d-inline-block">
-                            <p class="mb-2"><small class="text-uppercase text-black font-weight-bold">Premier League &mdash; Round 10</small></p>
+                            <p class="mb-2"><small class="text-uppercase text-black font-weight-bold">Uganda Premier League &mdash; Round 10</small></p>
                             <div class="bg-black py-2 px-4 mb-2 text-white d-inline-block rounded"><span class="h3">3:2</span></div>
                             <p class="mb-0"><small class="text-uppercase text-black font-weight-bold">10 September / 7:30 AM</small></p>
                           </div>
@@ -113,11 +113,11 @@
                           <div class="">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image mx-auto ml-lg-3 mb-3 mb-lg-0 order-2">
-                                <img src="{% static 'catda_assets/images/img_4_sq.jpg' %}" alt="Image" class="img-fluid">
+                                <img src="{% static 'catda_assets/images/catda.png' %}" alt="Image" class="img-fluid">
                               </div>
                               <div class="text order-1">
-                                <h3 class="h5 mb-0 text-black">Steelers</h3>
-                                <span class="text-uppercase small country text-black">London</span>
+                                <h3 class="h5 mb-0 text-black">Catda FC</h3>
+                                {% comment %} <span class="text-uppercase small country text-black">London</span> {% endcomment %}
                               </div>
                             </div>
                           </div>
@@ -128,7 +128,7 @@
           
                   <div class="row">
                   <div class="col-md-12">
-                  <h2 class="h6 text-uppercase text-black font-weight-bold mb-3">Latest Matches</h2>
+                  <h2 class="h6 text-uppercase text-black font-weight-bold mb-3">Previous Matches</h2>
                   <div class="site-block-tab">
                   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                   <li class="nav-item">
@@ -150,11 +150,11 @@
                       <div class="text-center text-lg-left">
                         <div class="d-block d-lg-flex align-items-center">
                           <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-                            <img src="{% static 'catda_assets/images/img_1_sq.jpg' %}" alt="Image" class="img-fluid">
+                            <img src="{% static 'catda_assets/images/catda.png' %}" alt="Image" class="img-fluid">
                           </div>
                           <div class="text">
-                            <h3 class="h5 mb-0 text-black">Packers</h3>
-                            <span class="text-uppercase small country">Brazil</span>
+                            <h3 class="h5 mb-0 text-black">Catda FC</h3>
+                            {% comment %} <span class="text-uppercase small country">Brazil</span> {% endcomment %}
                           </div>
                         </div>
                       </div>
@@ -169,12 +169,11 @@
                           <div class="">
                             <div class="d-block d-lg-flex align-items-center">
                               <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-                                <img src="{% static 'catda_assets/images/img_4_sq.jpg' %}" alt="Image" class="img-fluid">
+                                <img src="{% static 'catda_assets/images/fixtures/ggaba fc.jpg' %}" alt="Image" class="img-fluid">
                               </div>
                               
                               <div class="text order-1 w-100">
-                                <h3 class="h5 mb-0 text-black">Steelers</h3>
-                                <span class="text-uppercase small country">London</span>
+                                <h3 class="h5 mb-0 text-black">Ggaba FC</h3>
                               </div>
                             </div>
                           </div>
@@ -187,11 +186,11 @@
                     <div class="text-center text-lg-left">
                       <div class="d-block d-lg-flex align-items-center">
                         <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-                        <img src="{% static 'catda_assets/images/img_1_sq.jpg' %}" alt="Image" class="img-fluid">
+                        <img src="{% static 'catda_assets/images//fixtures/Fire FC.jpg' %}" alt="Image" class="img-fluid">
                         </div>
                         <div class="text">
-                        <h3 class="h5 mb-0 text-black">Patriots</h3>
-                        <span class="text-uppercase small country">Brazil</span>
+                        <h3 class="h5 mb-0 text-black">Fire FC</h3>
+                        {% comment %} <span class="text-uppercase small country">Brazil</span> {% endcomment %}
                         </div>
                       </div>
                     </div>
@@ -207,12 +206,12 @@
                         <div class="">
                           <div class="d-block d-lg-flex align-items-center">
                             <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-                            <img src="{% static 'catda_assets/images/img_4_sq.jpg' %}" alt="Image" class="img-fluid">
+                            <img src="{% static 'catda_assets/images/fixtures/lungujja galaxy.jpg' %}" alt="Image" class="img-fluid">
                             </div>
           
                             <div class="text order-1 w-100">
-                            <h3 class="h5 mb-0 text-black">Cowboys</h3>
-                            <span class="text-uppercase small country">London</span>
+                            <h3 class="h5 mb-0 text-black">Lungujja Galaxy</h3>
+                            {% comment %} <span class="text-uppercase small country">London</span> {% endcomment %}
                             </div>
                             
                           </div>
@@ -226,11 +225,11 @@
                     <div class="text-center text-lg-left">
                       <div class="d-block d-lg-flex align-items-center">
                           <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-                          <img src="{% static 'catda_assets/images/img_1_sq.jpg' %}" alt="Image" class="img-fluid">
+                          <img src="{% static 'catda_assets/images/fixtures/Black Star FC.jpg' %}" alt="Image" class="img-fluid">
                           </div>
                           <div class="text">
-                          <h3 class="h5 mb-0 text-black">Raiders</h3>
-                          <span class="text-uppercase small country">Brazil</span>
+                          <h3 class="h5 mb-0 text-black">Black Star FC</h3>
+                          {% comment %} <span class="text-uppercase small country">Brazil</span> {% endcomment %}
                           </div>
                       </div>
                     </div>
@@ -242,16 +241,17 @@
                     <div class="bg-black py-2 px-4 mb-2 text-white d-inline-block rounded"><span class="h5">3:2</span></div>
                     </div>
                   </div>
+                  
                   <div class="col-md-4 col-lg-4 text-center text-lg-right">
                     <div class="">
                       <div class="d-block d-lg-flex align-items-center">
                         <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-                        <img src="{% static 'catda_assets/images/img_4_sq.jpg' %}" alt="Image" class="img-fluid">
+                        <img src="{% static 'catda_assets/images/fixtures/ggaba fc.jpg' %}" alt="Image" class="img-fluid">
                         </div>
           
                         <div class="text order-1 w-100">
-                        <h3 class="h5 mb-0 text-black">Chiefs</h3>
-                        <span class="text-uppercase small country">London</span>
+                        <h3 class="h5 mb-0 text-black">Ggaba FC</h3>
+                        {% comment %} <span class="text-uppercase small country">London</span> {% endcomment %}
                         </div>
                       </div>
                     </div>
@@ -269,11 +269,11 @@
               <div class="text-center text-lg-left">
               <div class="d-block d-lg-flex align-items-center">
               <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-              <img src="{% static 'catda_assets/images/img_1_sq.jpg' %}" alt="Image" class="img-fluid">
+              <img src="{% static 'catda_assets/images/fixtures/ggaba fc.jpg' %}" alt="Image" class="img-fluid">
               </div>
               <div class="text">
-              <h3 class="h5 mb-0 text-black">Packers</h3>
-              <span class="text-uppercase small country">Brazil</span>
+              <h3 class="h5 mb-0 text-black">Ggaba FC</h3>
+              {% comment %} <span class="text-uppercase small country">Brazil</span> {% endcomment %}
               </div>
               </div>
               </div>
@@ -287,11 +287,11 @@
               <div class="">
               <div class="d-block d-lg-flex align-items-center">
               <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-              <img src="{% static 'catda_assets/images/img_4_sq.jpg' %}" alt="Image" class="img-fluid">
+              <img src="{% static 'catda_assets/images/catda.png' %}" alt="Image" class="img-fluid">
               </div>
               <div class="text order-1 w-100">
-              <h3 class="h5 mb-0 text-black">Steelers</h3>
-              <span class="text-uppercase small country">London</span>
+              <h3 class="h5 mb-0 text-black">Catda FC</h3>
+              {% comment %} <span class="text-uppercase small country">London</span> {% endcomment %}
               </div>
               </div>
               </div>
@@ -303,11 +303,11 @@
               <div class="text-center text-lg-left">
               <div class="d-block d-lg-flex align-items-center">
               <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-              <img src="{% static 'catda_assets/images/img_1_sq.jpg' %}" alt="Image" class="img-fluid">
+              <img src="{% static 'catda_assets/images/fixtures/ggaba fc.jpg' %}" alt="Image" class="img-fluid">
               </div>
               <div class="text">
-              <h3 class="h5 mb-0 text-black">Patriots</h3>
-              <span class="text-uppercase small country">Brazil</span>
+              <h3 class="h5 mb-0 text-black">Ggaba FC</h3>
+              {% comment %} <span class="text-uppercase small country">Brazil</span> {% endcomment %}
               </div>
               </div>
               </div>
@@ -321,11 +321,11 @@
               <div class="">
               <div class="d-block d-lg-flex align-items-center">
               <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-              <img src="{% static 'catda_assets/images/img_4_sq.jpg' %}" alt="Image" class="img-fluid">
+              <img src="{% static 'catda_assets/images/catda.png' %}" alt="Image" class="img-fluid">
               </div>
               <div class="text order-1 w-100">
-              <h3 class="h5 mb-0 text-black">Cowboys</h3>
-              <span class="text-uppercase small country">London</span>
+              <h3 class="h5 mb-0 text-black">Catda FC</h3>
+              {% comment %} <span class="text-uppercase small country">London</span> {% endcomment %}
               </div>
               </div>
               </div>
@@ -337,11 +337,11 @@
               <div class="text-center text-lg-left">
               <div class="d-block d-lg-flex align-items-center">
               <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-              <img src="{% static 'catda_assets/images/img_1_sq.jpg' %}" alt="Image" class="img-fluid">
+              <img src="{% static 'catda_assets/images/fixtures/ggaba fc.jpg' %}" alt="Image" class="img-fluid">
               </div>
               <div class="text">
-              <h3 class="h5 mb-0 text-black">Raiders</h3>
-              <span class="text-uppercase small country">Brazil</span>
+              <h3 class="h5 mb-0 text-black">Ggaba FC</h3>
+              {% comment %} <span class="text-uppercase small country">Brazil</span> {% endcomment %}
               </div>
               </div>
               </div>
@@ -355,11 +355,11 @@
               <div class="">
               <div class="d-block d-lg-flex align-items-center">
               <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-              <img src="{% static 'catda_assets/images/img_4_sq.jpg' %}" alt="Image" class="img-fluid">
+              <img src="{% static 'catda_assets/images/catda.png' %}" alt="Image" class="img-fluid">
               </div>
               <div class="text order-1 w-100">
-              <h3 class="h5 mb-0 text-black">Chiefs</h3>
-              <span class="text-uppercase small country">London</span>
+              <h3 class="h5 mb-0 text-black">Catda FC</h3>
+              {% comment %} <span class="text-uppercase small country">London</span> {% endcomment %}
               </div>
               </div>
               </div>
@@ -380,11 +380,11 @@
             <div class="text-center text-lg-left">
             <div class="d-block d-lg-flex align-items-center">
             <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-            <img src="{% static 'catda_assets/images/img_1_sq.jpg' %}" alt="Image" class="img-fluid">
+            <img src="{% static 'catda_assets/images/fixtures/ggaba fc.jpg' %}" alt="Image" class="img-fluid">
             </div>
             <div class="text">
-            <h3 class="h5 mb-0 text-black">Packers</h3>
-            <span class="text-uppercase small country">Brazil</span>
+            <h3 class="h5 mb-0 text-black">Ggaba FC</h3>
+            {% comment %} <span class="text-uppercase small country">Brazil</span> {% endcomment %}
             </div>
             </div>
             </div>
@@ -398,11 +398,11 @@
             <div class="">
             <div class="d-block d-lg-flex align-items-center">
             <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-            <img src="{% static 'catda_assets/images/img_4_sq.jpg' %}" alt="Image" class="img-fluid">
+            <img src="{% static 'catda_assets/images/catda.png' %}" alt="Image" class="img-fluid">
             </div>
             <div class="text order-1 w-100">
-            <h3 class="h5 mb-0 text-black">Steelers</h3>
-            <span class="text-uppercase small country">London</span>
+            <h3 class="h5 mb-0 text-black">Catda FC</h3>
+            {% comment %} <span class="text-uppercase small country">London</span> {% endcomment %}
             </div>
             </div>
             </div>
@@ -419,11 +419,11 @@
               <div class="text-center text-lg-left">
               <div class="d-block d-lg-flex align-items-center">
               <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-              <img src="{% static 'catda_assets/images/img_1_sq.jpg' %}" alt="Image" class="img-fluid">
+              <img src="{% static 'catda_assets/images/fixtures/ggaba fc.jpg' %}" alt="Image" class="img-fluid">
               </div>
               <div class="text">
-              <h3 class="h5 mb-0 text-black">Patriots</h3>
-              <span class="text-uppercase small country">Brazil</span>
+              <h3 class="h5 mb-0 text-black">Ggaba FC</h3>
+              {% comment %} <span class="text-uppercase small country">Brazil</span> {% endcomment %}
               </div>
               </div>
               </div>
@@ -437,11 +437,11 @@
               <div class="">
               <div class="d-block d-lg-flex align-items-center">
               <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-              <img src="{% static 'catda_assets/images/img_4_sq.jpg' %}" alt="Image" class="img-fluid">
+              <img src="{% static 'catda_assets/images/catda.png' %}" alt="Image" class="img-fluid">
               </div>
               <div class="text order-1 w-100">
-              <h3 class="h5 mb-0 text-black">Cowboys</h3>
-              <span class="text-uppercase small country">London</span>
+              <h3 class="h5 mb-0 text-black">Catda FC</h3>
+              {% comment %} <span class="text-uppercase small country">London</span> {% endcomment %}
               </div>
               </div>
               </div>
@@ -456,11 +456,11 @@
               <div class="text-center text-lg-left">
               <div class="d-block d-lg-flex align-items-center">
               <div class="image image-small text-center mb-3 mb-lg-0 mr-lg-3">
-              <img src="{% static 'catda_assets/images/img_1_sq.jpg' %}" alt="Image" class="img-fluid">
+              <img src="{% static 'catda_assets/images/fixtures/ggaba fc.jpg' %}" alt="Image" class="img-fluid">
               </div>
               <div class="text">
-              <h3 class="h5 mb-0 text-black">Raiders</h3>
-              <span class="text-uppercase small country">Brazil</span>
+              <h3 class="h5 mb-0 text-black">Ggaba FC</h3>
+              {% comment %} <span class="text-uppercase small country">Brazil</span> {% endcomment %}
               </div>
               </div>
               </div>
@@ -474,11 +474,11 @@
               <div class="">
               <div class="d-block d-lg-flex align-items-center">
               <div class="image image-small ml-lg-3 mb-3 mb-lg-0 order-2">
-              <img src="{% static 'catda_assets/images/img_4_sq.jpg' %}" alt="Image" class="img-fluid">
+              <img src="{% static 'catda_assets/images/catda.png' %}" alt="Image" class="img-fluid">
               </div>
               <div class="text order-1 w-100">
-              <h3 class="h5 mb-0 text-black">Chiefs</h3>
-              <span class="text-uppercase small country">London</span>
+              <h3 class="h5 mb-0 text-black">Catda FC</h3>
+              {% comment %} <span class="text-uppercase small country">London</span> {% endcomment %}
               </div>
               </div>
               </div>
