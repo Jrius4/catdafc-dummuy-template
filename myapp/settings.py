@@ -121,24 +121,17 @@ WSGI_APPLICATION = 'myapp.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = { 
-<<<<<<< HEAD
+
     # 'default': { 
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': os.path.join(BASE_DIR,'db\db.sqlite3'),
     #  }
-
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'catdafc_fc_db',
-        'USER': 'root',
-        'PASSWORD': '',
-=======
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'catdafc_fc_db',
         'USER': 'catdafc_root',
         'PASSWORD': 'admin&&1010',
->>>>>>> b938262e909bc3fb1d7bde6fc0e84b4eb8094c1d
+
         'HOST': 'localhost',
         'PORT': '3306',
         
@@ -147,13 +140,10 @@ DATABASES = {
                     },
         
     }
-<<<<<<< HEAD
+
     }
-=======
-    
-    
-}
->>>>>>> b938262e909bc3fb1d7bde6fc0e84b4eb8094c1d
+
+
 
 
 AUTHENTICATION_BACKENDS = (
