@@ -20,9 +20,24 @@
  min-height: 400px;
  padding: 20px;
 }
-search-result-child{
+.search-result-child{
 align-content: center
 }
 .bg-text-title{
     display:inline;background:rgba(0, 0, 0,0.3);-webkit-box-shadow:20px 0 0 rgba(0, 0, 0,0.3),-20px 0 0 rgba(0, 0, 0,0.3);box-shadow:20px 0 0 rgba(0, 0, 0,0.3),-20px 0 0 rgba(0, 0, 0,0.3);
+}
+
+.feat-player{
+    min-height: 500px;
+    width: 100%;
+    z-index: 5;
+    background: #56c1e5;
+}
+
+.player-thumbnail{
+align-content: center;
+}
+
+.player-border{
+    border-top: #56c1e5 3px solid;
 }
