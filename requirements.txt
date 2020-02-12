@@ -10,7 +10,7 @@ coverage==4.5.4
 cryptography==2.7
 dataclasses==0.6
 defusedxml==0.6.0
-Django==2.1.11
+Django==2.2.10
 django-allauth==0.39.1
 django-ckeditor==5.7.1
 django-contact-form==1.7
