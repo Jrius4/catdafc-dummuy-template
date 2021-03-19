@@ -22,7 +22,7 @@ django-js-asset==1.2.2
 django-render-partial==0.4
 django-social-widgets==0.4.0
 django-tinymce4-lite==1.7.5
-djangorestframework==3.10.2
+djangorestframework==3.11.2
 djongo==1.2.33
 idna==2.8
 isort==4.3.21
